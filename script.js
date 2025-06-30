@@ -197,3 +197,36 @@ themeToggle.textContent = isLightTheme ? "dark_mode" : "light_mode";
 
 promptForm.addEventListener("submit", handleFormSubmit);
 promptForm.querySelector("#add-file-btn").addEventListener("click", () => fileInput.click());
+
+
+// Mocking user data for now (replace with Firebase auth if needed)
+    const userEmail = "jayasree@example.com";
+    const userName = "Jayasree Rathod";
+
+    document.getElementById("userEmail").textContent = userEmail;
+    document.getElementById("userName").textContent = `Hi, ${userName.split(" ")[0]}!`;
+
+    // Toggle dropdown
+    document.getElementById('profileBtn').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dropdown = document.getElementById('profileDropdown');
+      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', function (e) {
+      const profileBtn = document.getElementById('profileBtn');
+      const dropdown = document.getElementById('profileDropdown');
+      if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.style.display = 'none';
+      }
+    });
+
+    // Handle Switch Account & Sign Out
+    document.getElementById("signOutBtn").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });
+
+    document.getElementById("switchAccountBtn").addEventListener("click", () => {
+      window.location.href = "index.html";
+    });

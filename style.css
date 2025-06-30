@@ -328,6 +328,54 @@ body.bot-responding .prompt-form #stop-response-btn {
     color: var(--placeholder-color);
 }
 
+/* Profile Icon and Dropdown */
+.user-profile {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 60px;
+  background-color: #fff;
+  padding: 12px;
+  width: 250px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.dropdown .user-email,
+.dropdown .user-name {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+.switch-btn,
+.signout-btn {
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  background-color: #000561;
+}
+
+
 /*Responsive media query code for small screens */
 @media (max-width: 768px) {
     .container {
