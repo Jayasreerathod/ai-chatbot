@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Ai-Chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
   
   <!-- Firebase CDN -->
@@ -135,7 +137,6 @@
     justify-content: center; /* Vertically center content */
 }
 
-
     .signup label,
     .login label {
       font-size: 1.6em;
@@ -162,6 +163,33 @@
       padding: 10px;
     }
   }
+  @media (max-width: 399px) {
+  .login {
+    transform: none !important;
+    border-radius: 12px !important;
+    height: auto !important;
+    padding: 1.5rem 1rem;
+  }
+
+  .login label {
+    transform: none !important;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+  }
+
+  .main {
+    width: 80%;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+
+  input, button {
+    width: 90%;
+    font-size: 1rem;
+    margin: 10px auto;
+  }
+}
+
 
   
   </style>
